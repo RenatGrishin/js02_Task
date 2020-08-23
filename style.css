@@ -1,0 +1,41 @@
+body, div, h1{
+    margin: 0; padding: 0;
+}
+
+#taskboard{
+    width: 400px;
+    margin: 0 auto;
+    background: #f1f1f1;
+    text-align: center;
+    padding: 10px 30px 30px 30px;
+}
+#taskArea{
+    text-align: left;
+}
+.taskLine {
+    position: relative;
+}
+.taskLine p{
+    margin-left: 6px;
+    padding-bottom: 1px;
+}
+.deleteTask{
+    margin-left: -15px;
+    border: 0px;
+    color: red;
+    position: absolute;
+    background: rgba(0,0,0,0);
+}
+.deleteTask:hover{
+    color: coral;
+}
+.enterTaskList{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 53px;
+    max-height: 100px;
+}
+#texta{
+    width: 100%;
+    background: rgba(0,0,0,0);
+}

@@ -1,0 +1,20 @@
+<html>
+<header>
+    <link href="style.css" rel="stylesheet">
+    <title>speed bar</title>
+</header>
+<body>
+    <div id="taskBoard">
+        <h3>Задачи</h3>
+        <div id="taskArea">
+        </div>
+        
+        <form name="sendTask">
+            <textarea class="enterTaskList" name="writeTask"></textarea>
+        </form>
+        <input onclick="controller.addTaskTable(sendTask.writeTask.value)" type="submit" value="Добавить">
+        
+    </div>
+    <script src="./constructor.js"></script>
+</body>
+</html>
