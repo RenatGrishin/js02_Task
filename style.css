@@ -1,5 +1,6 @@
 body, div, h1{
     margin: 0; padding: 0;
+    font-family: sans-serif;
 }
 
 #taskboard{
@@ -18,6 +19,10 @@ body, div, h1{
 .taskLine p{
     margin-left: 6px;
     padding-bottom: 1px;
+    cursor: pointer;
+}
+.taskLine p:hover{
+    color: darkslategray;
 }
 .deleteTask{
     margin-left: -15px;
@@ -27,6 +32,7 @@ body, div, h1{
     background: rgba(0,0,0,0);
 }
 .deleteTask:hover{
+    cursor: pointer;
     color: coral;
 }
 .enterTaskList{
@@ -38,4 +44,7 @@ body, div, h1{
 #texta{
     width: 100%;
     background: rgba(0,0,0,0);
+}
+textarea{
+    font-family: sans-serif;
 }

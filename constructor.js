@@ -34,6 +34,9 @@ let view = {
             document.getElementById('texta').remove();
             taskList.insertAdjacentHTML("afterbegin", `<input class="deleteTask" onclick="controller.deleteTaskTable(${textareaInf.id})" type="submit" value="X">
             <p onclick="controller.editTaskTable(${textareaInf.id})">${textareaInf.task}</p>`)
+            
+            return textareaInf
+            //model.addChange(textareaInf)
         }
     }
 }
@@ -56,6 +59,9 @@ let model = {
     },
     editTask: function(taskId){
         return this.taskList[taskId];
+    },
+    addChange: function(newInfo){
+        this.taskList[newInfo.id].task = newInfo.task;
     }
 }
 
@@ -74,7 +80,8 @@ let controller = {
     },
     editTaskTable: function(idTask){
         let taskInfo = model.editTask(idTask);
-        console.log(view.editTask(idTask, taskInfo))
+        let textareaInf = view.editTask(idTask, taskInfo);
+        model.addChange(textareaInf)
     }
 }
 
