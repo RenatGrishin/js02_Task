@@ -26,6 +26,9 @@ let view = {
         taskList.insertAdjacentHTML("afterbegin",`<textarea id="texta">${taskInfo.task}</textarea>`);
         document.getElementById('texta').focus();
         
+        /* Тут уже идет нарушение. View не должен сохранять и изменять данные.
+           Но как это исправить я пока не придумал =(
+           Буду рад подсказке ;) */
         texta.onblur = function(){
             let textareaInf = {
                 id: taskInfo.id, 
@@ -36,7 +39,6 @@ let view = {
             <p onclick="controller.editTaskTable(${textareaInf.id})">${textareaInf.task}</p>`)
             
             return textareaInf
-            //model.addChange(textareaInf)
         }
     }
 }
